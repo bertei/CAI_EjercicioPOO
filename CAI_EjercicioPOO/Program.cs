@@ -10,12 +10,21 @@ namespace CAI_EjercicioPOO
     {
         static void Main(string[] args)
         {
-            List<JugadorFutbol> ListaJugadores = new List<JugadorFutbol>();
-            JugadorFutbol A = new JugadorFutbol();
-            ListaJugadores.Add(A);
-            Console.WriteLine(A.ToString());
-            A.DispararAlArco();
-            A.Defender();
+            //List<JugadorFutbol> ListaJugadores = new List<JugadorFutbol>();
+            //JugadorFutbol A = new JugadorFutbol();
+            //ListaJugadores.Add(A);
+            //Console.WriteLine(A.ToString());
+            //A.DispararAlArco();
+            //A.Defender();
+
+            ////////////////////////////////////////////////////////////////
+
+            List<Restaurant> ListaRestaurantes = new List<Restaurant>();
+            Validaciones V = new Validaciones();
+            Restaurant R = new Restaurant();
+            ListaRestaurantes.Add(R);
+            Console.WriteLine(R.ToString());
+
         }
 
         
