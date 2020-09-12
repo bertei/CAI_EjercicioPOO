@@ -20,11 +20,35 @@ namespace CAI_EjercicioPOO
             ////////////////////////////////////////////////////////////////
 
             List<Restaurant> ListaRestaurantes = new List<Restaurant>();
-            Validaciones V = new Validaciones();
-            Restaurant R = new Restaurant();
-            ListaRestaurantes.Add(R);
-            Console.WriteLine(R.ToString());
+            Restaurant R1 = new Restaurant("MaK DonaL", "Flores", "Fast food", 150, 180, 30, false);
+            ListaRestaurantes.Add(R1);
+            Restaurant R2 = new Restaurant("Pescado riki", "Alalai 321", "Pescados y Mariscos", 14, 14, 6, false);
+            ListaRestaurantes.Add(R2);
 
+            foreach (Restaurant r in ListaRestaurantes)
+            {
+                Console.WriteLine(r.ToString() + Environment.NewLine);
+            }
+            foreach(Restaurant r in ListaRestaurantes)
+            {
+                Console.WriteLine(r.HorarioAperturayCierre() + Environment.NewLine); 
+            }
+            
+            foreach(Restaurant r in ListaRestaurantes)
+            {
+                Console.WriteLine(Environment.NewLine);
+                r.MedidasCovid();
+                Console.WriteLine(Environment.NewLine);
+            }
+
+            foreach (Restaurant r in ListaRestaurantes)
+            {
+                Console.WriteLine(r.ToString() + Environment.NewLine);
+            }
+
+            //Console.WriteLine(R1.HorarioAperturayCierre());
+            //R1.MedidasCovid();
+            //Console.WriteLine(R1.ToString());
         }
 
         
