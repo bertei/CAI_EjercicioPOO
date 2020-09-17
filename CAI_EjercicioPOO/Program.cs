@@ -55,7 +55,8 @@ namespace CAI_EjercicioPOO
             ListaPlatos.Add(P1);
             Console.WriteLine(P1.ToString());
         }
-
-        
     }
+
+
+
 }

@@ -12,7 +12,7 @@ namespace CAI_EjercicioPOO
         private string _tipo; //entrada, plato fuerte, postre
         private int _precio;
         private string _acompanamiento;
-
+        
         private string Nombre
         {
             get { return _nombre; }
@@ -49,32 +49,20 @@ namespace CAI_EjercicioPOO
         public Plato()
         {
             Validaciones V = new Validaciones();
+            this._nombre = Nombre;
 
-            do
-            {
+            //bool flag;
 
-                bool flag = false;
-                Console.WriteLine("Ingrese el nombre del plato: ");
-                this._nombre = Console.ReadLine();
-                V.ValidarString(this._nombre);
+            //do
+            //{
+            //    flag = false;
+            //    Console.WriteLine("Ingrese el nombre del plato: ");
+            //    Nombre = Console.ReadLine();
+            //    Validaciones.ValidarString(Nombre);
+            //} while (flag == false);
 
-            } while (flag == false);
-            
+            Nombre = V.ValidarTextoVacio("nombre del plato");
 
-            try
-            {
-                Console.WriteLine("Ingrese el precio del plato: ");
-                this._precio = Convert.ToInt32(Console.ReadLine());
-            }
-            catch(FormatException e1)
-            {
-                Console.WriteLine(e1.Message);
-            }
-
-
-            
-            
-            
         }
 
         public override string ToString()
