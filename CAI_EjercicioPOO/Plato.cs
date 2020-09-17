@@ -50,9 +50,16 @@ namespace CAI_EjercicioPOO
         {
             Validaciones V = new Validaciones();
 
-            Console.WriteLine("Ingrese el nombre del plato: ");
-            this._nombre = Console.ReadLine();
-            V.ValidarString(this._nombre);
+            do
+            {
+
+                bool flag = false;
+                Console.WriteLine("Ingrese el nombre del plato: ");
+                this._nombre = Console.ReadLine();
+                V.ValidarString(this._nombre);
+
+            } while (flag == false);
+            
 
             try
             {
@@ -63,6 +70,8 @@ namespace CAI_EjercicioPOO
             {
                 Console.WriteLine(e1.Message);
             }
+
+
             
             
             

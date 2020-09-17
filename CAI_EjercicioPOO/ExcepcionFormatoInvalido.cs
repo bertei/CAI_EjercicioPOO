@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CAI_EjercicioPOO
 {
-    class ExcepcionFormatoInvalido
+    class ExcepcionFormatoInvalido : FormatException
     {
+        public ExcepcionFormatoInvalido() : base("Debe ingresar dato numerico.")
+        {
+            
+        }
     }
 }

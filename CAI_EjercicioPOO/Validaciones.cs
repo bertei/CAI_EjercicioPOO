@@ -13,9 +13,14 @@ namespace CAI_EjercicioPOO
 
         public string ValidarString(string userinput)
         {
+            bool flag = false;
             if(string.IsNullOrEmpty(userinput))
             {
                 Console.WriteLine("Debe ingresar algun caracter.");
+            }
+            else
+            {
+                flag = true;
             }
             return userinput;
         }
@@ -34,13 +39,7 @@ namespace CAI_EjercicioPOO
       //      return Msg;
       //}
 
-        public class FormatoInvalido : FormatException
-        {
-            public FormatoInvalido() : base("Debe ingresar dato numerico.")
-            {
-
-            }
-        }
+        
 
         
        
