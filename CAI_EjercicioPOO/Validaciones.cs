@@ -9,6 +9,41 @@ namespace CAI_EjercicioPOO
 
     class Validaciones
     {
-      
+
+
+        public string ValidarString(string userinput)
+        {
+            if(string.IsNullOrEmpty(userinput))
+            {
+                Console.WriteLine("Debe ingresar algun caracter.");
+            }
+            return userinput;
+        }
+
+      //public string ValidarNumero(string userinput)
+      //{
+      //      string Msg = "";
+      //      if (!int.TryParse(userinput, out int salidainput))
+      //      {
+      //          Msg = "Debe ingresar un dato numerico positivo.";
+      //      }
+      //      else if (salidainput < 0)
+      //      {
+      //          Msg = "Debe ingresar un dato numerico positivo.";
+      //      }
+      //      return Msg;
+      //}
+
+        public class FormatoInvalido : FormatException
+        {
+            public FormatoInvalido() : base("Debe ingresar dato numerico.")
+            {
+
+            }
+        }
+
+        
+       
+
     }
 }
