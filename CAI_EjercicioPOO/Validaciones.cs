@@ -27,17 +27,32 @@ namespace CAI_EjercicioPOO
             return salidavariable;
         }
 
-        public static int IngresoNumero(string Mensaje = "Ingrese un numero")
+        public int ValidarNumero(string variable)
         {
-            int numero;
+            int salidauserinput;
+            string userinput;
+            bool flag = false;
             do
             {
-                // solicitar cantidad 
-                Console.WriteLine(Mensaje);
-            } while (!int.TryParse(Console.ReadLine(), out numero) || numero < 0);
+                Console.WriteLine("Ingrese {0}.", variable);
+                userinput = Console.ReadLine();
+                if (!int.TryParse(userinput, out salidauserinput))
+                {
+                    Console.WriteLine("Error. Debe ingresar un dato numerico.");
+                }
+                else if (salidauserinput < 0)
+                {
+                    Console.WriteLine("Error. Debe ingresar un dato numerico positivo.");
+                }
+                else
+                {
+                    flag = true;
+                }
+            } while (flag == false);
 
-            return numero;
+            return salidauserinput; 
         }
+        
 
 
         //By maru

@@ -11,37 +11,46 @@ namespace CAI_EjercicioPOO
         private string _nombre;
         private string _tipo; //entrada, plato fuerte, postre
         private int _precio;
-        private string _acompanamiento;
+        private int _stock;
+        private string _bebidas;
+
         
-        private string Nombre
+        public string Nombre
         {
             get { return _nombre; }
             set { _nombre = value; }
         }
-        private string Tipo
+        public string Tipo
         {
             get { return _tipo; }
             set { _tipo = value; }
         }
-        private int Precio
+        public int Precio
         {
             get { return _precio; }
             set { _precio = value; }
         }
-        private string Acompanamiento
+        public string Bebidas
         {
-            get { return _acompanamiento; }
-            set { _acompanamiento = value; }
+            get { return _bebidas; }
+            set { _bebidas = value; }
+        }
+
+        public int Stock
+        {
+            get { return _stock; }
+            set { _stock = value; }
         }
 
         //public Plato() { }
 
-        public Plato(string Nombre, string Tipo, string Acompanamiento, int Precio)
+        public Plato(string Nombre, string Tipo, string Bebidas, int Precio, int Stock)
         {
             this._nombre = Nombre;
             this._tipo = Tipo;
-            this._acompanamiento = Acompanamiento;
+            this._bebidas = Bebidas;
             this._precio = Precio;
+            this._stock = Stock;
         }
 
        
@@ -50,25 +59,20 @@ namespace CAI_EjercicioPOO
         {
             Validaciones V = new Validaciones();
             this._nombre = Nombre;
-
-            //bool flag;
-
-            //do
-            //{
-            //    flag = false;
-            //    Console.WriteLine("Ingrese el nombre del plato: ");
-            //    Nombre = Console.ReadLine();
-            //    Validaciones.ValidarString(Nombre);
-            //} while (flag == false);
+            this._precio = Precio;
+            this._tipo = Tipo;
+            this._bebidas = Bebidas;
 
             Nombre = V.ValidarTextoVacio("nombre del plato");
+            Precio = V.ValidarNumero("precio del plato");
+            Tipo = V.ValidarTextoVacio("tipo de plato");
+            Bebidas = V.ValidarTextoVacio("si lleva bebidas");
 
         }
 
         public override string ToString()
         {
-            return string.Format("Nombre del plato: {0} - Precio del plato: {1}.", Nombre, Precio);
-
+            return string.Format("Nombre del plato: {0} - Precio del plato: {1} - Tipo de plato: {2} - Bebidas: {3} - Stock: {4}.", Nombre, Precio, Tipo, Bebidas, Stock);
         }
 
 

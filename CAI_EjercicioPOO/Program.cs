@@ -50,10 +50,24 @@ namespace CAI_EjercicioPOO
             //R1.MedidasCovid();
             //Console.WriteLine(R1.ToString());
 
-            List<Plato> ListaPlatos = new List<Plato>();
-            Plato P1 = new Plato();
-            ListaPlatos.Add(P1);
-            Console.WriteLine(P1.ToString());
+            ////List<Plato> ListaPlatos = new List<Plato>();
+            //Plato P1 = new Plato();
+            //ListaPlatos.Add(P1);
+            //Console.WriteLine(P1.ToString());
+
+            List<Cliente> ListaClientes = new List<Cliente>();
+            Cliente C1 = new Cliente();
+            ListaClientes.Add(C1);
+
+            ////ListaPlatos PlatosTakeAway = new ListaPlatos();
+            ////PlatosTakeAway.AgregarPlatos();
+            ////PlatosTakeAway.MostrarPlatos();
+
+            Pedido Pedidos = new Pedido();
+            //Pedidos.pedidoTakeAway();
+            C1.hacerPedido();
+
+
         }
     }
 

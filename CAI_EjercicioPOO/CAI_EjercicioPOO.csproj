@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcepcionFormatoInvalido.cs" />
-    <Compile Include="JugadorFutbol.cs" />
-    <Compile Include="Plato.cs" />
+    <Compile Include="Restaurante\Cliente.cs" />
+    <Compile Include="Restaurante\ExcepcionFormatoInvalido.cs" />
+    <Compile Include="JugadorDeFutbol\JugadorFutbol.cs" />
+    <Compile Include="Restaurante\ListaPlatos.cs" />
+    <Compile Include="Restaurante\Pedido.cs" />
+    <Compile Include="Restaurante\Plato.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Restaurant.cs" />
+    <Compile Include="Restaurante\Restaurant.cs" />
     <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>
